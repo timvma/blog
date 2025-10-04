@@ -2,4 +2,8 @@
 
 import dynamic from "next/dynamic";
 
-export const components = {};
+export const components = {
+  image: dynamic(() => import("./Image")),
+  location: dynamic(() => import("./Location")),
+  richtext: dynamic(() => import("./Richtext")),
+};

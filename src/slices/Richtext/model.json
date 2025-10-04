@@ -1,0 +1,28 @@
+{
+  "id": "richtext",
+  "type": "SharedSlice",
+  "name": "Richtext",
+  "description": "Richtext",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading1,heading2,heading3,heading4,heading5,heading6,strong,hyperlink,embed,list-item,o-list-item,paragraph,em,image"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

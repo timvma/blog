@@ -30,8 +30,9 @@ const routes: Route[] = [
  *
  * @param config - Configuration for the Prismic client.
  */
-export const createClient = (config: ClientConfig = {}) => {
+export function createClient(config: ClientConfig = {}) {
   const client = baseCreateClient(repositoryName, {
+    accessToken: process.env.PRISMIC_ACCESS_TOKEN,
     routes,
     fetchOptions:
       process.env.NODE_ENV === "production"
@@ -43,4 +44,4 @@ export const createClient = (config: ClientConfig = {}) => {
   enableAutoPreviews({ client });
 
   return client;
-};
+}
