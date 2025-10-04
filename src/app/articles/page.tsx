@@ -17,10 +17,8 @@ export default async function Page() {
       <Link href={"/articles/life/test"}>Life / Test</Link>
       {articles.map((article) => (
         <li key={article.uid}>
-          <Link
-            href={`/articles/${article.data.category?.slug}/${article.uid}`}
-          >
-            {article.data.category?.slug}/{article.data.title}
+          <Link href={`/articles/life/${article.uid}`}>
+            /{article.data.title}
           </Link>
         </li>
       ))}

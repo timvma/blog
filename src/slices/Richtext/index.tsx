@@ -1,5 +1,10 @@
-import { FC } from "react";
-import { Content } from "@prismicio/client";
+import { FC, ReactNode } from "react";
+import {
+  Content,
+  KeyTextField,
+  RichTextField,
+  RTParagraphNode,
+} from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { isFilled } from "@prismicio/client";
 /**
@@ -42,17 +47,9 @@ const Richtext: FC<RichtextProps> = ({ slice }) => {
   );
 };
 
-export const Paragraph = ({ children }) => {
-  const isEmty = isFilled.keyText(children);
+export const Paragraph = ({ children }: { children: any }) => {
+  const isEmty = isFilled.richText(children);
   return <p className={isEmty ? "mb-6" : ""}>{children}</p>;
-};
-
-type HeadingProps = {
-  as: String;
-};
-
-const Heading = (props: HeadingProps) => {
-  return <></>;
 };
 
 export default Richtext;
